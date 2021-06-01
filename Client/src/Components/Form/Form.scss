@@ -1,0 +1,120 @@
+@mixin widHei($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include widHei(100%, 75%);
+
+    .welcome {
+        text-align: center;
+        font-size: 1rem;
+        font-family: cursive;
+        font-weight: bold;
+    }
+
+    input {
+        outline: none;
+        padding-left: 10px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+
+        &:valid {
+            border-color: lightgreen;
+
+            &:focus {
+                transition: 0.3s linear;
+                -webkit-box-shadow: 0 0 10px lightgreen;
+                box-shadow: 0 0 10px lightgreen;
+            }
+
+          }
+          
+          &:invalid {
+            border-color: darkred;
+
+            &:focus {
+                transition: 0.3s linear;
+                -webkit-box-shadow: 0 0 10px darkred;
+                box-shadow: 0 0 10px darkred;
+            }
+
+          }
+
+    }
+
+    .name_surname {
+        @include widHei(100%, 8%);
+        display: flex;
+        justify-content: space-between;
+
+        .ns_inputs {
+            @include widHei(40%, 100%);
+        }
+    }
+
+    .patronymic {
+        @include widHei(100%, 8%);
+
+        input {
+            @include widHei(100%, 100%);
+        }
+
+    }
+
+    .email {
+        @include widHei(100%, 8%);
+        display: flex;
+        justify-content: space-between;
+
+        input {
+            @include widHei(100%, 100%);
+        }
+
+    }
+
+    .password {
+        @include widHei(100%, 8%);
+
+        input {
+            @include widHei(100%, 100%);
+        }
+
+    }
+
+    .confirm_password {
+        @include widHei(100%, 8%);
+
+        input {
+            @include widHei(100%, 100%);
+            border: 1px solid darkred;
+
+            
+            &:focus {
+                transition: 0.3s linear;
+                -webkit-box-shadow: 0 0 10px darkred;
+                box-shadow: 0 0 10px darkred;
+            }
+        }
+
+        .check {
+        outline: none;
+        padding-left: 10px;
+        border: 1px solid lightgreen;
+        border-radius: 5px;
+
+        &:focus {
+            transition: 0.3s linear;
+            -webkit-box-shadow: 0 0 10px lightgreen;
+            box-shadow: 0 0 10px lightgreen;
+        }
+
+        }
+
+    }
+
+
+}

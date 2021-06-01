@@ -1,0 +1,56 @@
+.submit {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid gray;
+
+    .reg {
+        cursor: pointer;
+        width: 40%;
+        height: 40%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: royalblue;
+        
+        span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+            }
+            
+            span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+            }
+            
+            &:hover span {
+            padding-right: 25px;
+            }
+            
+            &:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+    }
+
+    .log {
+        cursor: pointer;
+        width: 30%;
+        height: 15%;
+        text-decoration: underline;
+    }
+
+}

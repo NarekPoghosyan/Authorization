@@ -1,0 +1,5 @@
+{
+    "PORT": 5010,
+    "mongoUri": "mongodb+srv://narek:authrussia99@cluster0.yd5yu.mongodb.net/app?retryWrites=true&w=majority",
+    "jwtSecret": "Narek authorization project"
+}
