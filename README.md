@@ -1,7 +1,8 @@
 # Авторизация пользователя на MERN стэк (React Js, Express Js, MongoDB, Node Js).
 
-Для начало - npm install
-Для запуска - npm run dev
+Для начало - npm install <br />
+Для запуска - npm run dev <br />
+Во время ввода полей, пожалуйтса посмотрите количество символов, который он просит от вас.
 
 Приложение состоит из клиентской и серверной части, где клиент заполняя свои данные, делает регистрацию и все данные сохраняются в базе данных. После этого он может залогинится. Если он зашел в систему, генерируется Token, который активен 1 час и сохраняется в localStorage. В течении 1 часа не требуется снова залогинится. В системе просто отображается все данные, которые у него есть в базе данных.
 
@@ -15,15 +16,15 @@
 
 ## Использовались такие пакеты...
 
-mongoose
-jsonwebtoken
-bcrypt
-express - validator
-config
-nodemon
-concurrently
-proxy
-react-router-dom
-sass
+mongoose <br />
+jsonwebtoken <br />
+bcrypt <br />
+express - validator <br />
+config <br />
+nodemon <br />
+concurrently <br />
+proxy <br />
+react-router-dom <br />
+sass <br />
 
 ## Автор Нарек Погосян.
