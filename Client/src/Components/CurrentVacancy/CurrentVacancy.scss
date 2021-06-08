@@ -1,0 +1,41 @@
+@mixin widHei($w, $h, $fw) {
+    width: $w;
+    height: $h;
+    font-weight: $fw;
+}
+
+.vacancie_id {
+    width: 100%;
+    padding: 0 20%;
+    
+    div {
+        margin-top: 30px;
+    }
+    
+    button {
+        @include widHei(200px, 35px, bold);
+        cursor: pointer;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-transform: uppercase;
+        background-color: royalblue;
+        border: none;
+        margin-top: 30px;
+    }
+
+    span {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    
+    .vi_title {
+        color: royalblue;
+        font-weight: bold;
+        font-family: cursive;
+        font-size: 2rem;
+    }
+    
+}

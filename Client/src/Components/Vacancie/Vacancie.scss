@@ -1,0 +1,56 @@
+@mixin widHei($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+.vacancie {
+    cursor: pointer;
+    @include widHei(100%, 350px);
+    margin-top: 30px;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    border: 1px solid lightgray;
+
+    &:hover {
+        -webkit-box-shadow: 0 0 10px royalblue;
+        box-shadow: 0 0 10px royalblue;
+    }
+
+    div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    span {
+        font-weight: bold;
+    }
+
+    .vacancie_title {
+        @include widHei(100%, 15%);
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgb(0, 192, 10);
+    }
+
+    .vacancie_company {
+        @include widHei(100%, 8%);
+    }
+
+    .vacancie_desc {
+        @include widHei(100%, 50%);
+    }
+
+    .vacancie_price {
+        @include widHei(100%, 8%);
+    }
+
+    .vacancie_tags {
+        @include widHei(100%, 8%);
+    }
+
+    .vacancie_date {
+        @include widHei(100%, 8%);
+    }
+
+}

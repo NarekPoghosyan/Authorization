@@ -111,13 +111,13 @@ router.post(
             const isOkey = await User.findById(decoded.userId)
 
             if (!isOkey) {
-                res.status(401).json({ message: 'Токен не активирован', okey: false })
+                return res.status(401).json({ message: 'Токен не активирован', okey: false })
             }
 
             return res.json({ okey: true, message: 'Добро пожаловать' })
 
         } catch (e) {
-            return res.status(401).json({ message: "Что-то пошло не так, во время автоматический входа в систему", okey: false })
+            return res.status(401).json({ okey: false })
         }
     })
 
@@ -139,7 +139,7 @@ router.post(
                     patron: getUser.patron,
                     date: getUser.newUserDate,
                     email: getUser.email,
-                }, 
+                },
                 message: 'Ваши данные'
             })
 

@@ -1,7 +1,12 @@
+// libraries
 import React, { Fragment, useState } from 'react'
 import { useHistory } from 'react-router'
+
+// components
 import Date from './Date/Date'
 import Submit from '../Submit/Submit'
+
+// styles
 import './Form.scss'
 
 const Form = () => {
@@ -27,7 +32,6 @@ const Form = () => {
     const authRequest = async () => {
         try {
             const incData = Object.values(form).filter(elem => {
-                console.log(elem)
                 return elem === ''
             })
 
@@ -50,15 +54,13 @@ const Form = () => {
             })
             const resData = await response.json()
             alert(resData.message);
-
-            history.push('/')
+            console.log(3333)
+            history.push('/login')
         } catch (error) {
             alert(error.message)
         }
 
     }
-
-    console.log(form)
 
     return (
         <Fragment>

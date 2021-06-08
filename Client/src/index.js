@@ -1,8 +1,13 @@
+// libraries
 import React from 'react';
-import { render } from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { render } from 'react-dom';
+
+// Application
+import App from './App';
+
+// styles
+import './index.css';
 
 render(
   <React.StrictMode>

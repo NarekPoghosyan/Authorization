@@ -1,4 +1,7 @@
+// libraries
 import React, { Fragment, useEffect, useState } from 'react'
+
+// styles
 import './Date.scss'
 
 const Date = ({ takeSelectHandler }) => {

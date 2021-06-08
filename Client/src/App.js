@@ -1,14 +1,17 @@
+// libraries
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
-import LoginPage from './pages/LoginPage/LoginPage'
-import AuthPage from './pages/AuthPage/AuthPage'
-import HomePage from './pages/HomePage/HomePage'
+
+// pages
+import { LoginPage, AuthPage, VacanciesPage, NewVacanciePage, VacancyIdPage } from './pages/indexPage'
 
 function App() {
-  const [isAuth, setIsAuth] = useState(false)
+  const [vacancyInfo, setVacancyInfo] = useState({})
+  const [pathById, setPathById] = useState('')
 
-  const changeIsAuth = (bool) => {
-    setIsAuth(bool)
+  const changePathById = (id, vacInfo) => {
+    setVacancyInfo(vacInfo)
+    setPathById(id)
   }
 
   return (
@@ -16,14 +19,23 @@ function App() {
       <div className="content">
         <Router>
           <Switch>
-            <Route path="/" exact>
-              {isAuth ? <HomePage /> : <LoginPage changeIsAuth={changeIsAuth} />}
+            <Route path="/login" exact>
+              <LoginPage />
             </Route>
-            <Route path="/auth">
+            <Route path="/register" exact>
               <AuthPage />
             </Route>
+            <Route path="/vacancies" exact>
+              <VacanciesPage changePathById={changePathById} />
+            </Route>
+            <Route path="/create" exact>
+              <NewVacanciePage />
+            </Route>
+            <Route path={`/vacancy/${pathById}`}>
+              <VacancyIdPage vacancyInfo={vacancyInfo} />
+            </Route>
           </Switch>
-          <Redirect to="/" />
+          <Redirect to="/login" />
         </Router>
       </div>
     </div>

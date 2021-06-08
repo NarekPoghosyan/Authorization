@@ -21,20 +21,12 @@ code {
     monospace;
 }
 
-.App {
+.content {
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
-  width: 500px;
-  height: 700px;
   padding: 20px;
-  border: 1px solid lightgray;
-  box-shadow: 0 0 10px 10px lightgray;
 }

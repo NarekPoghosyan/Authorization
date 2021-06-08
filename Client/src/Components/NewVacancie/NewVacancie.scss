@@ -1,0 +1,90 @@
+@mixin widHeiDis($w, $h, $d, $jc, $ai, $fd, $b, $o) {
+    width: $w;
+    height: $h;
+    display: $d;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+    border: $b;
+    outline: $o;
+}
+
+.new_vacancies {
+    @include widHeiDis(50%, 100%, flex, center, center, column, null, null);
+
+    .add_vacancie {
+        @include widHeiDis(400px, 600px, flex, space-between, center, column, null, null);
+        font-size: 1rem;
+        font-family: cursive;
+        font-weight: bold;
+
+        input {
+            @include widHeiDis(100%, 8%, null, null, null, null, 1px solid lightgray, none);
+            padding-left: 10px;
+            border-radius: 5px;
+    
+            &:focus {
+                transition: 0.3s linear;
+                -webkit-box-shadow: 0 0 10px royalblue;
+                box-shadow: 0 0 10px royalblue;
+            }
+    
+        }
+
+        textarea {
+            @include widHeiDis(100%, 200px, null, null, null, null, 1px solid lightgray, none);
+            font-size: 20px;
+            padding: 15px;
+
+            &:focus {
+                transition: 0.3s linear;
+                -webkit-box-shadow: 0 0 10px royalblue;
+                box-shadow: 0 0 10px royalblue;
+            }
+
+
+        }
+
+        div {
+            @include widHeiDis(100%, null, flex, space-between, center, null, null, null);
+
+            button {
+                @include widHeiDis(180px, 35px, flex, center, center, null, none, null);
+                cursor: pointer;
+                border-radius: 5px;
+                color: white;
+                text-transform: uppercase;
+                font-weight: bold;
+                background-color: #00a800;;
+
+                span {
+                    cursor: pointer;
+                    display: inline-block;
+                    position: relative;
+                    transition: 0.5s;
+                    }
+                    
+                    span:after {
+                    content: '\002B';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.5s;
+                    }
+                    
+                    &:hover span {
+                    padding-right: 25px;
+                    }
+                    
+                    &:hover span:after {
+                    opacity: 1;
+                    right: 0;
+                }
+
+            }
+        }
+
+    }
+
+}

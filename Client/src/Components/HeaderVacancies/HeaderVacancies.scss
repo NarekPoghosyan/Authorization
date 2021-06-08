@@ -1,35 +1,38 @@
-@mixin  widHeiDis($w, $h, $d, $jc, $ai, $fd,) {
+@mixin widHeiDisplay($w, $h, $d, $jc, $ai,) {
     width: $w;
     height: $h;
     display: $d;
     justify-content: $jc;
     align-items: $ai;
-    flex-direction: $fd;
 }
 
-.submit {
-    @include widHeiDis(100%, 20%, flex, space-around, center, column);
-    border-top: 1px solid gray;
+@mixin curPos($c, $p) {
+    cursor: $c;
+    position: $p;
+}
 
-    .reg {
-        @include widHeiDis(40%, 40%, flex, center, center, null);
-        cursor: pointer;
+.header_vacancies {
+    @include widHeiDisplay(100%, 150px, flex, space-around, center);
+    border-bottom: 1px solid lightgray;
+
+    button {
+        @include widHeiDisplay(200px, 35px, flex, center, center);
+        @include curPos(pointer, none);
         border-radius: 5px;
         color: white;
         text-transform: uppercase;
         font-weight: bold;
-        background-color: royalblue;
+        border: none;
         
         span {
-            cursor: pointer;
+            @include curPos(pointer, relative);
             display: inline-block;
-            position: relative;
             transition: 0.5s;
             }
             
             span:after {
-            content: '\00bb';
-            position: absolute;
+            @include curPos(none, absolute);
+            content: '\002B';
             opacity: 0;
             top: 0;
             right: -20px;
@@ -46,11 +49,12 @@
         }
     }
 
-    .log {
-        cursor: pointer;
-        width: 30%;
-        height: 15%;
-        text-decoration: underline;
+    .create {
+        background-color: rgb(0, 168, 0);
+    }
+
+    .logout {
+        background-color: royalblue;
     }
 
 }

@@ -1,0 +1,5 @@
+export {default as LoginPage} from './LoginPage/LoginPage'
+export {default as AuthPage} from './AuthPage/AuthPage'
+export {default as VacanciesPage} from './VacanciesPage/VacanciesPage'
+export {default as NewVacanciePage} from './NewVacanciePage/NewVacanciePage'
+export {default as VacancyIdPage} from './VacancyIdPage/VacancyIdPage'

@@ -1,11 +1,19 @@
-import React, { Fragment } from 'react'
+// libraries
+import React from 'react'
+
+// components
 import Form from '../../Components/Form/Form'
+
+// styles
+import './AuthPage.scss'
 
 const AuthPage = () => {
     return (
-        <Fragment>
-            <Form />
-        </Fragment>
+        <div className="authpage">
+            <div className="authpage_content">
+                <Form />
+            </div>
+        </div>
     )
 }
 

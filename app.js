@@ -8,6 +8,9 @@ app.use(express.json({ extended: true }))
 // /auth
 app.use('/auth', require('./routes/auth.routes'))
 
+// /vacancies
+app.use('/vacancies', require('./routes/vacancies.routes'))
+
 const PORT = config.get('PORT') || 5010
 
 async function start() {

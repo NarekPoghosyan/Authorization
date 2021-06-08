@@ -1,0 +1,16 @@
+@mixin  widHeiDis($w, $h, $d, $jc, $ai, $fd) {
+    width: $w;
+    height: $h;
+    display: $d;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+}
+
+.authpage {
+    @include widHeiDis(100%, 100%, flex, center, center, null);
+}
+
+.authpage_content {
+    @include widHeiDis(500px, 700px, flex, space-between, center, column);
+}
